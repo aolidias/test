@@ -2,7 +2,6 @@
 
 App.controller('ContactController', ['$scope', 'ContactService', function($scope, ContactService) {
 			
-	
 	      $scope.months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 		  var self = this;
           
@@ -16,7 +15,8 @@ App.controller('ContactController', ['$scope', 'ContactService', function($scope
       						        self.contacts = d;
       					       },
             					function(errResponse){
-            						console.error('Error while fetching Contacts');
+      					    	   window.alert("Error while fetching Contacts");
+      					    	   console.error('Error while fetching Contacts');
             					}
       			       );
           };
@@ -26,11 +26,12 @@ App.controller('ContactController', ['$scope', 'ContactService', function($scope
 		              .then(
                       self.fetchAllContacts, 
 				              function(errResponse){
-                    	  		
-					               console.error('Error while creating Contact.');
+                    	  		window.alert("Error while creating Contact.");
+					            console.error('Error while creating Contact.');
 				              }	
                   );
         	  self.reset();
+        	  
           };
 
          self.updateContact = function(contact, id){
@@ -38,8 +39,12 @@ App.controller('ContactController', ['$scope', 'ContactService', function($scope
         	 ContactService.updateContact(contact, id)
 		              .then(
 				              self.fetchAllContacts, 
+				              function() {
+	                    	  		window.alert("Contact updated!");
+							       },
 				              function(errResponse){
-					               console.error('Error while updating Contact.');
+				            	  window.alert("Error while updating Contact.");
+					              console.error('Error while updating Contact.');
 				              }	
                   );
         	 self.reset();
@@ -50,6 +55,7 @@ App.controller('ContactController', ['$scope', 'ContactService', function($scope
 		              .then(
 				              self.fetchAllContacts, 
 				              function(errResponse){
+				            	  window.alert('Error while deleting Contact.');
 					               console.error('Error while deleting Contact.');
 				              }	
                   );

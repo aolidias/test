@@ -5,6 +5,7 @@ body, #mainWrapper {
 
 body, .form-control{
 	font-size:12px!important;
+	background-color: #ffffff;
 }
 
 .floatRight{
@@ -17,12 +18,24 @@ body, .form-control{
 }
 
 .formcontainer{
-	background-color: #DAE8E8;
 	padding: 20px;
 }
 
+
+.panel-heading-per {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #F1EBEB;
+    font-weight: bold;
+  
+}
+
+
 .tablecontainer{
 	padding-left: 20px;
+	
 }
 
 .generic-container {
@@ -31,7 +44,7 @@ body, .form-control{
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #EAE7E7;
+  background-color: #A21905;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 0 30px black;

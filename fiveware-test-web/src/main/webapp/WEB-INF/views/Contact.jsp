@@ -4,23 +4,13 @@
   <head>  
     <title>Fiveware Test</title>  
     <style>
-      .username.ng-valid {
+      .firstName.ng-valid {
           background-color: lightgreen;
       }
-      .username.ng-dirty.ng-invalid-required {
+      .firstName.ng-dirty.ng-invalid-required {
           background-color: red;
       }
-      .username.ng-dirty.ng-invalid-minlength {
-          background-color: yellow;
-      }
-
-      .email.ng-valid {
-          background-color: lightgreen;
-      }
-      .email.ng-dirty.ng-invalid-required {
-          background-color: red;
-      }
-      .email.ng-dirty.ng-invalid-email {
+      .firstName.ng-dirty.ng-invalid-minlength {
           background-color: yellow;
       }
 
@@ -31,7 +21,8 @@
   <body ng-app="myApp" class="ng-cloak">
       <div class="generic-container" ng-controller="ContactController as ctrl">
           <div class="panel panel-default">
-              <div class="panel-heading"><span class="lead">Contact CRUD </span></div>
+          
+              <div class="panel-heading-per"><span class="lead">Contact Register </span></div>
               <div class="formcontainer">
                   <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
                       <input type="hidden" ng-model="ctrl.contact.id" />
@@ -39,7 +30,7 @@
                           <div class="form-group col-md-12">
                               <label class="col-md-2 control-lable" for="firstName">First Name</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.contact.firstName" name="firstName" class="username form-control input-sm" placeholder="Enter your first name" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.contact.firstName" name="firstName" class="firstName form-control input-sm" placeholder="Enter your first name" required ng-minlength="3"/>
                                   <div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.firstName.$error.required">This is a required field</span>
                                       <span ng-show="myForm.firstName.$error.minlength">Minimum length required is 3</span>
@@ -53,7 +44,7 @@
                           <div class="form-group col-md-12">
                               <label class="col-md-2 control-lable" for="lastName">Last Name</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.contact.lastName" name="lastName" class="username form-control input-sm" placeholder="Enter your last name" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.contact.lastName" name="lastName" class="firstName form-control input-sm" placeholder="Enter your last name" required ng-minlength="3"/>
                                   <div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.lastName.$error.required">This is a required field</span>
                                       <span ng-show="myForm.lastName.$error.minlength">Minimum length required is 3</span>
@@ -112,7 +103,7 @@
               </div>
           </div>
           <div class="panel panel-default">
-              <div class="panel-heading"><span class="lead">List of Contacts </span></div>
+              <div class="panel-heading-per"><span class="lead">List of Contacts </span></div>
               <div class="tablecontainer">
                   <table class="table table-hover">
                       <thead>
