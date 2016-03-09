@@ -25,12 +25,14 @@ public class ContactServiceImpl implements ContactService {
 			LOGGER.debug("Contact already exists");
 			throw new Exception("Contact already exists");
 		}
+		LOGGER.debug("Save contact contact: " + contact.toString());
 		contactRepository.save(contact);
 
 	}
 
 	@Override
 	public void deleteContact(Integer id) {
+		LOGGER.debug("Deleting contact with id:" + id);
 		contactRepository.delete(id);
 
 	}
@@ -52,12 +54,15 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public List<Contact> listAllContact() {
+		LOGGER.debug("Listing all contacts");
 		return IteratorUtils.toList(contactRepository.findAll().iterator());
 	}
 
 	@Override
 	public Contact getContactById(Integer id) {
+		LOGGER.debug("Get contact with id" + id);
 		return contactRepository.findOne(id);
+		
 	}
 
 	@Override
