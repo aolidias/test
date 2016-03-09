@@ -19,6 +19,12 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
+/**
+ * 
+ * Spring configuration class
+ * @author aolidias
+ *
+ */
 @EnableJpaRepositories("org.fiveware.test.model.repository")
 @Configuration
 @ComponentScan(basePackages = { "org.fiveware.test.model" })
@@ -54,7 +60,6 @@ public class ModelApplicationConfig {
 		jpaVendorAdapter.setGenerateDdl(true);
 		return jpaVendorAdapter;
 	}
-
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();

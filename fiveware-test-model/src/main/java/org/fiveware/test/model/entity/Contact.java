@@ -5,6 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 
+ * Entity class for contact
+ * 
+ * @author aolidias
+ *
+ */
 @Entity
 public class Contact {
 	
@@ -79,5 +86,10 @@ public class Contact {
 	
 	public void setFavoriteMonth(String favoriteMonth) {
 		this.favoriteMonth = favoriteMonth;
+	}
+	
+	@Override
+	public String toString() {
+		return "First name " + getFirstName() + ", Last name " + getLastName() + ", sex " + getSex();
 	}
 }

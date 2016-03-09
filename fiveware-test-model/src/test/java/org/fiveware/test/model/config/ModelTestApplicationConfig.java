@@ -39,7 +39,6 @@ public class ModelTestApplicationConfig {
 	    return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).build();
 	  }
 	
-		//retirar 
 	 @Bean
 	  public JpaVendorAdapter jpaVendorAdapter() {
 	    HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
