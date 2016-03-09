@@ -1,9 +1,14 @@
-package org.fiveware.test.web.controller.model;
+package org.fiveware.test.web.controller.dto;
 
-public class ErrorInfo {
+/**
+ * Dto to error msg
+ * @author aolidas
+ *
+ */
+public class ErrorMsg {
 	private String errorMessage;
 	
-	public ErrorInfo(String errorMessage) {
+	public ErrorMsg(String errorMessage) {
 		super();
 		this.errorMessage = errorMessage;
 	}
