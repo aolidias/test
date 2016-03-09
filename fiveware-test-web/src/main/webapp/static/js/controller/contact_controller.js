@@ -26,7 +26,7 @@ App.controller('ContactController', ['$scope', 'ContactService', function($scope
 		              .then(
                       self.fetchAllContacts, 
 				              function(errResponse){
-                    	  		window.alert("Error while creating Contact.");
+                    	  		window.alert("Duplicate contact.");
 					            console.error('Error while creating Contact.');
 				              }	
                   );
